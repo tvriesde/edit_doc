@@ -1,10 +1,37 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  </head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="X-Frame-Bypass: Web Component extending IFrame to bypass X-Frame-Options: deny/sameorigin">
+	<title>X-Frame-Bypass Web Component Demo</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+		iframe {
+			display: block;
+			width: calc(100% - 40px);
+			height: calc(100% - 40px);
+			margin: 20px;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	</style>
+	<script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+	<script src="x-frame-bypass.js" type="module"></script>
+</head>
     <body>
      <p>hi</p>
-      <iframe src="https://microsofteur-my.sharepoint.com/personal/tvriesde_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={e8c20631-9de7-4fcb-bcab-8620dd617e31}&amp;action=embedview" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+      <iframe is="x-frame-bypass" src="https://microsofteur-my.sharepoint.com/personal/tvriesde_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={e8c20631-9de7-4fcb-bcab-8620dd617e31}&amp;action=embedview" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
       </br>
-      <iframe src="https://microsofteur-my.sharepoint.com/:w:/r/personal/tvriesde_microsoft_com/_layouts/15/Doc.aspx?sourcedoc=%7Be8c20631-9de7-4fcb-bcab-8620dd617e31%7D&action=view&wdAccPdf=0&wdEmbedFS=1&share=IQExBsLo553LT7yrhiDdYX4xASrwopltRFjyovVmA0VkN1M" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+      <iframe is="x-frame-bypass" src="https://microsofteur-my.sharepoint.com/:w:/r/personal/tvriesde_microsoft_com/_layouts/15/Doc.aspx?sourcedoc=%7Be8c20631-9de7-4fcb-bcab-8620dd617e31%7D&action=view&wdAccPdf=0&wdEmbedFS=1&share=IQExBsLo553LT7yrhiDdYX4xASrwopltRFjyovVmA0VkN1M" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
     </body>
 </html>
+
